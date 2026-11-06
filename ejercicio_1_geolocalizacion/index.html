@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permisos y Geolocalización</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 40px; }
+        #mapa { width: 100%; max-width: 600px; height: 400px; margin: 20px auto; border: 1px solid #ccc; display: none; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 5px; }
+        button:hover { background-color: #0056b3; }
+        .info { margin: 20px; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h2>Consulta de Permisos y GPS</h2>
+    
+    <p>Estado del permiso de GPS: <strong><span id="estado-permiso">Verificando...</span></strong></p>
+    
+    <button id="btn-ubicacion">Obtener y Mostrar Coordenadas</button>
+    
+    <div class="info" id="coordenadas"></div>
+    
+    
+    <iframe id="mapa" src="" title="Mapa de la ubicación actual" frameborder="0"></iframe>
+
+    <script src="app.js"></script>
+</body>
+</html>
