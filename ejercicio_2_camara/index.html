@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Cámara Web</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 30px; background-color: #f4f4f9; }
+        .contenedor { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+        .medios { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        video, canvas { border: 3px solid #333; border-radius: 8px; max-width: 100%; width: 400px; background-color: #000; }
+        button { padding: 12px 24px; font-size: 16px; cursor: pointer; background-color: #28a745; color: white; border: none; border-radius: 5px; margin: 5px; }
+        button:hover { background-color: #218838; }
+        button:disabled { background-color: #cccccc; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+    <h2>Captura de Medios: Cámara</h2>
+    
+    <div class="contenedor">
+        <div>
+            <button id="btn-iniciar">Encender Cámara</button>
+            <button id="btn-detener" disabled>Apagar Cámara</button>
+            <button id="btn-capturar" disabled>Tomar Fotografía</button>
+        </div>
+
+        <div class="medios">
+           
+            <video id="video" autoplay playsinline muted></video>
+            
+            
+            <canvas id="canvas"></canvas>
+        </div>
+        
+        <p id="mensaje" role="status" aria-live="polite"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
