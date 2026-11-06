@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrategia Network-First</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f7f6; padding: 20px; max-width: 600px; margin: auto; }
+        .cabecera { display: flex; justify-content: space-between; align-items: center; }
+        button { padding: 10px 20px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 5px; font-size: 16px; }
+        button:hover { background-color: #0056b3; }
+        #estado-red { font-weight: bold; padding: 5px 10px; border-radius: 5px; }
+        .online { background-color: #d4edda; color: #155724; }
+        .offline { background-color: #f8d7da; color: #721c24; }
+        .usuario-card { background: white; padding: 15px; margin-top: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .usuario-card h3 { margin: 0 0 5px 0; color: #333; }
+        .usuario-card p { margin: 0; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="cabecera">
+        <h2>Lista de Usuarios (API)</h2>
+        <span id="estado-red" class="online" role="status" aria-live="polite">Cargando datos...</span>
+    </div>
+    
+    <button id="btn-cargar">Cargar Datos</button>
+
+    <div id="contenedor-datos">
+      
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
